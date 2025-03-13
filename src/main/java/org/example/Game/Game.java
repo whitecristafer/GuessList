@@ -40,7 +40,7 @@ public class Game {
                 System.out.println("Вы не ввели команду.");
                 continue;
             }
-
+//C:\Users\admin\.jdks\openjdk-21.0.1\bin
             String[] parts = input.split("\\s+");
 
             try {
