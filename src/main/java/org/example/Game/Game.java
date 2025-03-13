@@ -23,7 +23,7 @@ public class Game {
         int[] array = new int[ARRAY_SIZE];
         Integer[] guessed = new Integer[ARRAY_SIZE];
 
-        // Генерация случайного массива
+        // Создаем рандом цифры
         for (int i = 0; i < ARRAY_SIZE; i++) {
             array[i] = random.nextInt(MAX_VALUE + 1);
         }
@@ -50,6 +50,11 @@ public class Game {
 
                     if (i < 0 || j < 0 || j >= ARRAY_SIZE) {
                         System.out.println("Должны быть индексы от 0 до " + (ARRAY_SIZE - 1));
+                        continue;
+                    }
+
+                    if (i == j) {
+                        System.out.println("Вы ввели одинаковые индексы, а так не честно :3");
                         continue;
                     }
 
